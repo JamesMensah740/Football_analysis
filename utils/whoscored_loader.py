@@ -3,7 +3,7 @@ from soccerdata import WhoScored
 def get_whoscored_data(
     leagues=["ENG-Premier League"],
     seasons=["2023-24"],
-    headless=True,
+    headless=False,  # changed to False by default
     proxy=None
 ):
     return WhoScored(
@@ -13,24 +13,24 @@ def get_whoscored_data(
         proxy=proxy
     )
 
-def load_schedule(leagues=["ENG-Premier League"], seasons=["2023-24"]):
-    ws = get_whoscored_data(leagues, seasons)
+def load_schedule(leagues=["ENG-Premier League"], seasons=["2023-24"], headless=False):
+    ws = get_whoscored_data(leagues, seasons, headless=headless)
     return ws.read_schedule()
 
-def load_missing_players(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"]):
-    ws = get_whoscored_data(leagues, seasons)
+def load_missing_players(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"], headless=False):
+    ws = get_whoscored_data(leagues, seasons, headless=headless)
     return ws.read_missing_players(match_id=match_id)
 
-def load_events(match_id, output_fmt="events", leagues=["ENG-Premier League"], seasons=["2023-24"]):
-    ws = get_whoscored_data(leagues, seasons)
+def load_events(match_id, output_fmt="events", leagues=["ENG-Premier League"], seasons=["2023-24"], headless=False):
+    ws = get_whoscored_data(leagues, seasons, headless=headless)
     return ws.read_events(match_id=match_id, output_fmt=output_fmt)
 
-def load_player_match_stats(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"]):
-    ws = get_whoscored_data(leagues, seasons)
+def load_player_match_stats(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"], headless=False):
+    ws = get_whoscored_data(leagues, seasons, headless=headless)
     return ws.read_player_match_stats(match_id=match_id)
 
-def load_shot_events(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"]):
-    ws = get_whoscored_data(leagues, seasons)
+def load_shot_events(match_id, leagues=["ENG-Premier League"], seasons=["2023-24"], headless=False):
+    ws = get_whoscored_data(leagues, seasons, headless=headless)
     return ws.read_shot_events(match_id=match_id)
 
 def get_available_leagues():

@@ -1,6 +1,27 @@
  Football_analysis
 
- ## 🚀 How to Run Locally
+# ⚽ Football Data Hub
+
+A Streamlit-powered dashboard for exploring rich football datasets from multiple trusted sources.
+
+## 📊 Data Sources Integrated
+
+- **FBref**: Comprehensive team & player statistics (match/season), events, lineups, xG.
+- **Understat** (planned): Detailed xG & player-level shot data.
+- **Club Elo** (planned): Global club ratings and performance trends.
+- **WhoScored**, **Sofascore**, **FotMob** (planned): Match stats, player ratings, fixtures.
+- **SoFIFA** (planned): Player ratings, potential, and team stats from FIFA games.
+- **MatchHistory** (TBD): Historical match analytics.
+
+## 🛠 Features
+- Interactive dashboard with source-based views.
+- League and season selectors.
+- Detailed stat filters (team/player, match/season, events, xG).
+- Clean layout powered by Streamlit.
+
+##  Getting Started
+
+ ##  How to Run Locally
 
 ### 1. Clone the Repo
 
