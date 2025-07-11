@@ -1,5 +1,3 @@
- Football_analysis
-
 # ⚽ Football Data Hub
 
 A Streamlit-powered dashboard for exploring rich football datasets from multiple trusted sources.
